@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Notification"
+        android:id="@+id/notifications"
+        android:alphabeticShortcut="n"
+        android:numericShortcut="2"
+        android:icon="@drawable/notification"
+        android:showAsAction="always">
+    </item>
+
+    <item android:title="Search"
+        android:id="@+id/search"
+        android:alphabeticShortcut="s"
+        android:numericShortcut="1"
+        android:icon="@drawable/lens"
+        android:showAsAction="always">
+    </item>
+
+
+
+    <item android:id="@+id/signIn"
+        android:title="Sign In"
+        android:numericShortcut="1"
+        android:alphabeticShortcut="s" >
+    </item>
+
+    <item android:id="@+id/preferences"
+        android:title="Settings"
+        android:numericShortcut="2"
+        android:alphabeticShortcut="p"
+        android:icon="@drawable/settings"
+        android:showAsAction="withText">
+    </item>
+
+    <item android:id="@+id/aboutUs"
+        android:title="About Us"
+        android:numericShortcut="1"
+        android:alphabeticShortcut="a" >
+    </item>
+</menu>
