@@ -1,6 +1,8 @@
 package com.example.dark_devil.orgfarm;
 
-import com.example.dark_devil.orgfarm.HomeFragment;
+import com.example.dark_devil.orgfarm.customAdapters.DrawerItemCustomAdapter;
+import com.example.dark_devil.orgfarm.customAdapters.HomeScreenFeedItem;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -73,7 +75,6 @@ public class MainActivity extends Activity {
         };
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
 

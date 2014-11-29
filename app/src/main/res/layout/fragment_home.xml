@@ -2,14 +2,69 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:divider="#ff950b47"
+    android:baselineAligned="false"
+    android:background="#f3073207">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <TabHost
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Home Page"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        android:background="#ffff2050" />
+        android:id="@+id/home_fragment_tabhost"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/Sellers"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ListView
+                        android:id="@+id/home_feed_list_sellers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_corner"
+                        android:choiceMode="singleChoice"
+                        android:divider="#000"
+                        android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Buyers"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ListView
+                        android:id="@+id/home_feed_list_buyers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_corner"
+                        android:choiceMode="singleChoice"
+                        android:divider="#000"
+                        android:dividerHeight="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Marketplace"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"></LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 </LinearLayout>

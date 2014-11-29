@@ -1,4 +1,4 @@
-package com.example.dark_devil.orgfarm;
+package com.example.dark_devil.orgfarm.customAdapters;
 
 
 import android.app.Activity;
@@ -10,9 +10,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.dark_devil.orgfarm.ObjectDrawerItem;
+import com.example.dark_devil.orgfarm.R;
+
 /**
  * Created by dark-devil on 11/24/14.
  */
+
 public class DrawerItemCustomAdapter extends ArrayAdapter<ObjectDrawerItem>{
     Context mContext;
     int layoutResourceId;
@@ -32,7 +36,6 @@ public class DrawerItemCustomAdapter extends ArrayAdapter<ObjectDrawerItem>{
         listItem = inflater.inflate(layoutResourceId, parent, false);
         ImageView imageViewIcon = (ImageView) listItem.findViewById(R.id.imageViewIcon);
         TextView textViewName = (TextView) listItem.findViewById(R.id.textViewName);
-
         ObjectDrawerItem menu = data[position];
         imageViewIcon.setImageResource(menu.icon);
         textViewName.setText(menu.name);
